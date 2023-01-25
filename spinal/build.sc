@@ -1,10 +1,13 @@
 import mill._, scalalib._
 
-val spinalVersion = "1.7.3"
+val spinalVersion = "1.8.0"
 
-object mylib extends SbtModule {
-  def scalaVersion = "2.12.14"
+object projectname extends SbtModule {
+  def scalaVersion = "2.12.16"
   override def millSourcePath = os.pwd
+  def sources = T.sources(
+    millSourcePath / "src"
+  )
   def ivyDeps = Agg(
     ivy"com.github.spinalhdl::spinalhdl-core:$spinalVersion",
     ivy"com.github.spinalhdl::spinalhdl-lib:$spinalVersion"

@@ -74,6 +74,7 @@ class ArrayStream(PORT_COUNT:Int, AXIS_DATA_WIDTH:Int, AXIS_KEEP_WIDTH:Int, AXIS
 
 }
 
+/*
 object ArrayStream_Verilog {
   def main(args: Array[String]) {
     SpinalConfig(targetDirectory = "netlist/verilog", oneFilePerComponent = true).generateVerilog(new ArrayStream(
@@ -84,3 +85,4 @@ object ArrayStream_Verilog {
     ))
   }
 }
+*/
